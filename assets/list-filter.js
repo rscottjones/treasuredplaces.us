@@ -11,10 +11,26 @@
   var rows = Array.prototype.slice.call(table.tBodies[0].rows);
   var total = rows.length;
 
+  // Preferred display order for the land manager dropdown. Anything not
+  // listed here (a future agency added to the table) sorts alphabetically
+  // after these.
+  var MANAGER_ORDER = ["NPS", "BLM", "USFS", "FWS", "Air Force", "Army"];
+
   // Build the dropdowns from the table itself, so they stay in sync
   // whenever rows are added or removed.
-  function fill(select, values) {
-    values.sort().forEach(function (v) {
+  function fill(select, values, order) {
+    if (order) {
+      values.sort(function (a, b) {
+        var ia = order.indexOf(a), ib = order.indexOf(b);
+        if (ia === -1 && ib === -1) return a < b ? -1 : a > b ? 1 : 0;
+        if (ia === -1) return 1;
+        if (ib === -1) return -1;
+        return ia - ib;
+      });
+    } else {
+      values.sort();
+    }
+    values.forEach(function (v) {
       var o = document.createElement("option");
       o.value = v;
       o.textContent = v;
@@ -34,7 +50,7 @@
   });
   fill(type, Object.keys(types));
   fill(state, Object.keys(states));
-  fill(manager, Object.keys(managers));
+  fill(manager, Object.keys(managers), MANAGER_ORDER);
 
   function apply() {
     var needle = q.value.trim().toLowerCase();

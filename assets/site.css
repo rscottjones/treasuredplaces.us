@@ -228,17 +228,17 @@ p { margin: 0 0 1.15rem; }
 
 .tally {
   list-style: none;
-  margin: 1.75rem 0;
-  padding: 1.5rem 1.5rem;
+  max-width: 24rem;
+  margin: 1.75rem auto;
+  padding: 1.5rem 1.75rem;
   background: var(--paper-warm);
   border-radius: 6px;
-  text-align: center;
+  text-align: left;
 }
 .tally li {
-  padding: 0.6rem 0;
+  padding: 0.35rem 0;
   font-size: 1.08rem;
 }
-.tally li + li { border-top: 1px solid var(--rule); }
 .tally .count {
   font-family: var(--display);
   font-weight: 600;

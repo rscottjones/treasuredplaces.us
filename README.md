@@ -11,7 +11,6 @@ join/                              Join the Quest!
 faq/                               FAQ
 updates/                           Updates (the three former blog posts)
 404.html
-_redirects                         Netlify/Cloudflare redirects (unused on GitHub Pages)
 blog/                              Redirect stub -> /updates/
 coming-soon/                       Redirect stub -> /updates/#coming-soon
 3-new-nps-additions/               Redirect stub -> /updates/#3-new-nps-additions
@@ -111,28 +110,34 @@ Claude chat any time — just upload or link the current site and ask.
 7. Wait for DNS to propagate, then check **Enforce HTTPS** in Pages
    settings once it becomes available.
 
-No `.nojekyll` file is needed here — the only thing GitHub's default Jekyll
-processing would touch on this site is `_redirects`, which already does
-nothing on GitHub Pages regardless. Everything else passes through
-unprocessed since there's no Liquid template syntax or YAML front matter
-anywhere in the site.
+No `.nojekyll` file is needed here. GitHub's default Jekyll processing
+mainly affects files and folders that start with an underscore — this site
+doesn't have any, so there's nothing for it to touch. Everything passes
+through unprocessed since there's no Liquid template syntax or YAML front
+matter anywhere in the site either.
 
-GitHub Pages has no server-side redirect rules, unlike Netlify/Cloudflare —
-`_redirects` does nothing there. That's what the `blog/`, `coming-soon/`,
-`3-new-nps-additions/`, and `4-new-additions-in-jan-2025/` folders are:
-static pages that redirect via `<meta http-equiv="refresh">` the instant
-they load. Broader old WordPress URLs — category archives, tag archives,
-author pages, feeds — aren't covered this way and will hit the 404 page
-instead; that's a real gap versus Netlify, but those never had the
-inbound-link traffic the four post URLs did.
+GitHub Pages has no server-side redirect rules — there's no config file
+that tells it "send this old URL to that new one." That's what the `blog/`,
+`coming-soon/`, `3-new-nps-additions/`, and `4-new-additions-in-jan-2025/`
+folders are: real, static pages that redirect via
+`<meta http-equiv="refresh">` the instant they load, since a real file is
+the only thing GitHub Pages can serve. Broader old WordPress URLs — category
+archives, tag archives, author pages, feeds — aren't covered this way and
+will hit the 404 page instead; those never had the inbound-link traffic the
+four post URLs did.
 
 ## Alternative: Netlify or Cloudflare Pages
 
 Push to a Git repo (or drag-and-drop the folder directly on Netlify — no
-Git needed) and connect it. Both read `_redirects` natively, so the
-`blog/`, `coming-soon/`, etc. stub folders aren't necessary there — they're
-harmless to leave in place either way. Neither needs a build command; set
-the build output directory to the repo root.
+Git needed) and connect it. Neither needs a build command; set the build
+output directory to the repo root. The `blog/`, `coming-soon/`, etc. stub
+folders work the same way there as on GitHub Pages.
+
+Both of those hosts also support a `_redirects` file for pattern-based
+rules (`/category/*` → `/updates/`, and similar), which this project doesn't
+include — GitHub Pages can't use it, so it was dropped. If you switch to
+Netlify or Cloudflare later and want those broader old-URL redirects back,
+that's a quick file to regenerate; just ask.
 
 Point `treasuredplaces.us` and `www.treasuredplaces.us` at the new host and
 keep `www` as the canonical hostname, since that's what your existing pages

@@ -6,21 +6,23 @@ and edit directly, including through GitHub's own in-browser editor.
 
 ```
 index.html                        Our Treasured Places (home)
-the-treasured-places-list/        The List
-join-the-quest/                   Join the Quest!
-faq/                              FAQ
-updates/                          Updates (the three former blog posts)
+list/                              The List
+join/                              Join the Quest!
+faq/                               FAQ
+updates/                           Updates (the three former blog posts)
 404.html
-_redirects                        Netlify/Cloudflare redirects (unused on GitHub Pages)
-blog/                             Redirect stub -> /updates/
-coming-soon/                      Redirect stub -> /updates/#coming-soon
-3-new-nps-additions/              Redirect stub -> /updates/#3-new-nps-additions
-4-new-additions-in-jan-2025/      Redirect stub -> /updates/#4-new-additions-in-jan-2025
-assets/site.css                   All styling
-assets/nav.js                     Mobile menu
-assets/list-filter.js             Search/filter on the list page
+_redirects                         Netlify/Cloudflare redirects (unused on GitHub Pages)
+blog/                              Redirect stub -> /updates/
+coming-soon/                       Redirect stub -> /updates/#coming-soon
+3-new-nps-additions/               Redirect stub -> /updates/#3-new-nps-additions
+4-new-additions-in-jan-2025/       Redirect stub -> /updates/#4-new-additions-in-jan-2025
+the-treasured-places-list/         Redirect stub -> /list/ (old WordPress URL)
+join-the-quest/                    Redirect stub -> /join/ (old WordPress URL)
+assets/site.css                    All styling
+assets/nav.js                      Mobile menu
+assets/list-filter.js              Search/filter on the list page
 data/treasured-places-checklist.csv   Downloadable spreadsheet, linked from the site
-images/                           Site images
+images/                            Site images
 ```
 
 ## 1. Images
@@ -32,7 +34,7 @@ trailhead photo that used to run there was dropped.
 
 ## 2. Editing the list
 
-The list page (`the-treasured-places-list/index.html`) is plain HTML — the
+The list page (`list/index.html`) is plain HTML — the
 495 rows are written out in full in the file, the same way the site
 actually serves them. There's no spreadsheet behind it and nothing to run.
 Edit it the same way you'd edit any of the other pages.
@@ -40,24 +42,29 @@ Edit it the same way you'd edit any of the other pages.
 **On GitHub, entirely in your browser:**
 
 1. Open the repository on github.com and click into
-   `the-treasured-places-list/index.html`.
+   `list/index.html`.
 2. Click the pencil icon (top right of the file view) to edit it.
 3. Use your browser's Find (Ctrl+F or Cmd+F) to jump to the place you want
    to change.
 4. **To add a place:** find any existing row — it looks like this:
 
    ```
-   <tr data-name="Zion" data-type="NP" data-states="UT"><td data-col="name"><a href="http://www.nps.gov/zion/">Zion</a></td><td data-col="type"><span class="type-code">NP</span></td><td data-col="states"><span class="states">UT</span></td></tr>
+   <tr data-managers="NPS" data-name="Zion" data-states="UT" data-type="NP"><td data-col="name"><a href="http://www.nps.gov/zion/">Zion</a></td><td data-col="type"><span class="type-code">NP</span></td><td data-col="states"><span class="states">UT</span></td><td data-col="managers"><span class="managers">NPS</span></td></tr>
    ```
 
    Copy that whole line, paste it as a new line, and change the name
-   (it appears twice), the link, the type code, and the state(s). Change
-   all of them consistently — the `data-name`, `data-type`, and
-   `data-states` values are what the search box at the top of the page
-   reads, so if they don't match the visible text, that row won't show up
-   right when someone filters. Where you paste the new line in the file
-   doesn't matter functionally — the alphabetical order is just for
-   scanning by eye.
+   (it appears twice), the link, the type code, the state(s), and the land
+   manager (also appears twice). Change every matching pair consistently —
+   the `data-name`, `data-type`, `data-states`, and `data-managers` values
+   are what the search and filter boxes at the top of the page read, so if
+   they don't match the visible text, that row won't show up right when
+   someone filters. `data-states` and `data-managers` can each hold more
+   than one value, comma-separated — e.g. `data-managers="NPS, BLM"` for a
+   jointly managed place — just keep the visible text in the matching `<span>`
+   the same. Where you paste the new line in the file doesn't matter
+   functionally — the alphabetical order is just for scanning by eye. Land
+   manager codes are listed on the list page itself, under "Land manager
+   codes."
 5. **To remove a place:** delete its entire line, from `<tr` to `</tr>`.
 6. **To edit a place** — new URL, redesignation, name change — just change
    the text in place.
@@ -151,6 +158,24 @@ and inbound links use.
   rather have zero external requests, delete the two `<link>` tags for
   `fonts.googleapis.com` in each page; the CSS falls back to Georgia and the
   system sans stack.
+- **The list has a fourth filterable column, Land Manager** (NPS, BLM,
+  USFS, FWS, or one of two one-off agencies). I determined each place's
+  manager from the domain of its official link — `nps.gov` → NPS,
+  `blm.gov` → BLM, and so on. Four places didn't have a link that fit that
+  pattern, so I looked each one up individually rather than guessing: Camp
+  Hale-Continental Divide (USFS), Castner Range (US Army — the only
+  national monument under military management), Military Working Dog Teams
+  (US Air Force, at Lackland AFB), and St Francis Dam Disaster (USFS). This
+  method has a real limitation worth knowing: a place's link usually names
+  only the lead agency, so genuinely co-managed places (a handful of BLM
+  monuments are jointly run with the Forest Service, for instance) will
+  only show their primary manager unless corrected by hand. The field
+  supports multiple comma-separated values for exactly that case —
+  `data-managers="NPS, BLM"` — see "Editing the list" above.
+- **Two reusable callout box styles** — `.info-box` (light blue) and
+  `.alert-box` (light yellow) — are in `site.css`, ready to wrap around any
+  paragraph: `<div class="info-box"><p>Your text.</p></div>`. Neither is
+  used anywhere yet.
 
 ## Things I fixed, and a couple you should check
 
@@ -210,6 +235,6 @@ Worth checking, left as-is:
 - All four are spelled that way on the live WordPress site too, so these are
   pre-existing typos, not something the conversion introduced. I left the
   data as-is rather than silently rewriting place names; fix them directly
-  in `the-treasured-places-list/index.html` if you want them corrected —
+  in `list/index.html` if you want them corrected —
   each name appears twice in its row (once in the link text, once in the
   `data-name` attribute).

@@ -6,6 +6,7 @@
   var q = document.getElementById("f-name");
   var type = document.getElementById("f-type");
   var state = document.getElementById("f-state");
+  var manager = document.getElementById("f-manager");
   var count = document.getElementById("f-count");
   var rows = Array.prototype.slice.call(table.tBodies[0].rows);
   var total = rows.length;
@@ -21,28 +22,33 @@
     });
   }
 
-  var types = {}, states = {};
+  function splitList(value) {
+    return value.split(",").map(function (x) { return x.trim(); }).filter(Boolean);
+  }
+
+  var types = {}, states = {}, managers = {};
   rows.forEach(function (r) {
     types[r.dataset.type] = true;
-    r.dataset.states.split(",").forEach(function (s) {
-      s = s.trim();
-      if (s) states[s] = true;
-    });
+    splitList(r.dataset.states).forEach(function (s) { states[s] = true; });
+    splitList(r.dataset.managers || "").forEach(function (m) { managers[m] = true; });
   });
   fill(type, Object.keys(types));
   fill(state, Object.keys(states));
+  fill(manager, Object.keys(managers));
 
   function apply() {
     var needle = q.value.trim().toLowerCase();
     var t = type.value;
     var s = state.value;
+    var m = manager.value;
     var shown = 0;
 
     rows.forEach(function (r) {
       var ok =
         (!needle || r.dataset.name.toLowerCase().indexOf(needle) !== -1) &&
         (!t || r.dataset.type === t) &&
-        (!s || r.dataset.states.split(",").map(function (x) { return x.trim(); }).indexOf(s) !== -1);
+        (!s || splitList(r.dataset.states).indexOf(s) !== -1) &&
+        (!m || splitList(r.dataset.managers || "").indexOf(m) !== -1);
       r.hidden = !ok;
       if (ok) shown++;
     });
@@ -53,7 +59,7 @@
         : "Showing " + shown + " of " + total + " places";
   }
 
-  [q, type, state].forEach(function (el) {
+  [q, type, state, manager].forEach(function (el) {
     el.addEventListener("input", apply);
   });
 

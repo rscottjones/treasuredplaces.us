@@ -48,22 +48,25 @@ Edit it the same way you'd edit any of the other pages.
 4. **To add a place:** find any existing row — it looks like this:
 
    ```
-   <tr data-managers="NPS" data-name="Zion" data-states="UT" data-type="NP"><td data-col="name"><a href="http://www.nps.gov/zion/">Zion</a></td><td data-col="type"><span class="type-code">NP</span></td><td data-col="states"><span class="states">UT</span></td><td data-col="managers"><span class="managers">NPS</span></td></tr>
+   <tr data-managers="NPS" data-name="Zion" data-states="UT" data-type="NP"><td data-col="name"><a href="http://www.nps.gov/zion/">Zion</a></td><td data-col="type"><span class="type-code">NP</span></td><td data-col="managers"><span class="managers">NPS</span></td><td data-col="states"><span class="states">UT</span></td></tr>
    ```
 
    Copy that whole line, paste it as a new line, and change the name
-   (it appears twice), the link, the type code, the state(s), and the land
-   manager (also appears twice). Change every matching pair consistently —
-   the `data-name`, `data-type`, `data-states`, and `data-managers` values
-   are what the search and filter boxes at the top of the page read, so if
-   they don't match the visible text, that row won't show up right when
-   someone filters. `data-states` and `data-managers` can each hold more
-   than one value, comma-separated — e.g. `data-managers="NPS, BLM"` for a
-   jointly managed place — just keep the visible text in the matching `<span>`
-   the same. Where you paste the new line in the file doesn't matter
-   functionally — the alphabetical order is just for scanning by eye. Land
-   manager codes are listed on the list page itself, under "Land manager
-   codes."
+   (it appears twice), the link, the type code, the agency, and the
+   location (each of the last two appears twice). Change every matching
+   pair consistently — the `data-name`, `data-type`, `data-managers`, and
+   `data-states` values are what the search and filter boxes at the top of
+   the page read, so if they don't match the visible text, that row won't
+   show up right when someone filters.
+
+   Note that two attribute names don't match their column headings, for
+   historical reasons: **`data-states` is the "Location" column** and
+   **`data-managers` is the "Agency" column**. Both can hold more than one
+   value, comma-separated — e.g. `data-managers="NPS, BLM"` for a jointly
+   managed place — just keep the visible text in the matching `<span>` the
+   same. Where you paste the new line in the file doesn't matter
+   functionally — the alphabetical order is just for scanning by eye.
+   Agency codes are listed on the list page itself, under "Agency codes."
 5. **To remove a place:** delete its entire line, from `<tr` to `</tr>`.
 6. **To edit a place** — new URL, redesignation, name change — just change
    the text in place.
@@ -172,10 +175,12 @@ and inbound links use.
   national monument under military management), Military Working Dog Teams
   (US Air Force, at Lackland AFB), and St Francis Dam Disaster (USFS). This
   method has a real limitation worth knowing: a place's link usually names
-  only the lead agency, so genuinely co-managed places (a handful of BLM
-  monuments are jointly run with the Forest Service, for instance) will
-  only show their primary manager unless corrected by hand. The field
-  supports multiple comma-separated values for exactly that case —
+  only the lead agency, so genuinely co-managed places don't surface
+  automatically. Four have since been corrected by hand — Bears Ears
+  (BLM, USFS), Grand Canyon-Parashant (BLM, NPS), Browns Canyon
+  (BLM, USFS), and Berryessa Snow Mountain (USFS, BLM) — but others may
+  still show only their primary agency. The field supports multiple
+  comma-separated values for exactly that case —
   `data-managers="NPS, BLM"` — see "Editing the list" above.
 - **Two reusable callout box styles** — `.info-box` (light blue) and
   `.alert-box` (light yellow) — are in `site.css`, ready to wrap around any

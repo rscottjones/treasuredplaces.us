@@ -2,8 +2,11 @@
    Palette and type are set once here; every page uses this file. */
 
 :root {
+  color-scheme: light dark;
+
   --pine:        #17342b;
   --pine-deep:   #0d201a;
+  --pine-text:   #17342b;
   --bark:        #46341f;
   --bark-light:  #5c462c;
   --paper:       #f9faf6;
@@ -13,6 +16,20 @@
   --gold:        #c9a227;
   --rule:        #dde1d6;
 
+  /* Surfaces and text that sit on top of a solid accent fill */
+  --on-accent:          #fff;
+  --caption-on-accent:  #a9c0b4;
+  --btn-invert-bg:      #fff;
+  --field-bg:           #fff;
+
+  /* Callout boxes */
+  --info-bg:          #eaf4fb;
+  --info-border:      #4a90c4;
+  --infogreen-bg:     #e9f4ee;
+  --infogreen-border: #17342b;
+  --alert-bg:         #fdf6da;
+  --alert-border:     #cc9a1e;
+
   --display: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --body: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 
@@ -21,6 +38,56 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; }
+
+/* ---------- Dark mode ----------
+   Applies only when the visitor's operating system is set to dark.
+   There's no toggle and no JavaScript: if someone has never changed
+   that setting, they see the light site exactly as before.
+   Only the variables change — every rule below reads from them. */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Deep desaturated green-black, so it still reads as "pine" not "grey" */
+    --paper:       #121614;
+    --paper-warm:  #1a201d;
+
+    --ink:         #e6ebe7;
+    --ink-soft:    #a4b0a9;
+    --rule:        #2f3a35;
+
+    /* Fills stay dark enough for white text; text gets its own lighter tone */
+    --pine:        #2b6350;
+    --pine-deep:   #0d201a;
+    --pine-text:   #8fc9ab;
+
+    /* Brown goes muted-warm; the raw bark is nearly invisible on dark */
+    --bark:        #7a5c37;
+    --bark-light:  #a07d4e;
+
+    --gold:        #d9b64a;
+
+    --on-accent:          #ffffff;
+    --caption-on-accent:  #cfe2d7;
+    --btn-invert-bg:      #121614;
+    --field-bg:           #1a201d;
+
+    --info-bg:          #16283a;
+    --info-border:      #5b9dd0;
+    --infogreen-bg:     #16291f;
+    --infogreen-border: #59a883;
+    --alert-bg:         #2f2a14;
+    --alert-border:     #d9b64a;
+  }
+
+  /* The button inverts to the page colour on hover, so its text
+     needs the lighter brown to stay legible. */
+  .btn:hover,
+  .btn:focus-visible { color: var(--bark-light); }
+
+  /* Photographs are usually mixed a touch bright against a dark page. */
+  .hero-figure img { filter: brightness(0.88); }
+}
+
 
 html { font-size: 106.25%; -webkit-text-size-adjust: 100%; }
 
@@ -35,7 +102,7 @@ body {
 
 img { max-width: 100%; height: auto; display: block; }
 
-a { color: var(--pine); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+a { color: var(--pine-text); text-decoration-thickness: 1px; text-underline-offset: 2px; }
 a:hover { color: var(--bark); }
 
 :focus-visible {
@@ -48,7 +115,7 @@ a:hover { color: var(--bark); }
   left: -9999px;
   top: 0;
   background: var(--pine);
-  color: #fff;
+  color: var(--on-accent);
   padding: 0.75rem 1rem;
   z-index: 100;
 }
@@ -81,7 +148,7 @@ a:hover { color: var(--bark); }
   line-height: 1.05;
   letter-spacing: 0.01em;
   margin: 0;
-  color: var(--pine);
+  color: var(--pine-text);
 }
 
 .sign-tagline {
@@ -125,13 +192,13 @@ a:hover { color: var(--bark); }
 .nav-list a:focus-visible {
   background: var(--pine);
   border-color: var(--pine);
-  color: #fff;
+  color: var(--on-accent);
 }
 
 .nav-list a[aria-current="page"] {
   background: var(--pine);
   border-color: var(--pine);
-  color: #fff;
+  color: var(--on-accent);
   font-weight: 600;
 }
 
@@ -161,7 +228,7 @@ main { display: block; }
 
 h1, h2, h3 {
   font-family: var(--display);
-  color: var(--pine);
+  color: var(--pine-text);
   line-height: 1.15;
   font-weight: 600;
 }
@@ -207,7 +274,7 @@ p { margin: 0 0 1.15rem; }
 .tally-card .count {
   font-weight: 800;
   font-size: 2.5rem;
-  color: var(--pine);
+  color: var(--pine-text);
   line-height: 1.1;
 }
 
@@ -215,7 +282,7 @@ p { margin: 0 0 1.15rem; }
   display: block;
   font-weight: 700;
   font-size: 1rem;
-  color: var(--pine);
+  color: var(--pine-text);
   margin-top: 0.5rem;
   letter-spacing: 0.03em;
   line-height: 1.35;
@@ -238,7 +305,7 @@ p { margin: 0 0 1.15rem; }
 .tally-total .line {
   font-weight: 700;
   font-size: 1.6rem;
-  color: #fff;
+  color: var(--on-accent);
   line-height: 1.05;
   white-space: nowrap;
 }
@@ -251,7 +318,7 @@ p { margin: 0 0 1.15rem; }
   display: block;
   font-weight: 400;
   font-size: 0.7rem;
-  color: #a9c0b4;
+  color: var(--caption-on-accent);
   margin-top: 0.15rem;
   letter-spacing: 0.05em;
 }
@@ -269,7 +336,7 @@ blockquote {
 .btn {
   display: inline-block;
   background: var(--bark);
-  color: #fff;
+  color: var(--on-accent);
   text-decoration: none;
   font-weight: 600;
   letter-spacing: 0.03em;
@@ -279,7 +346,7 @@ blockquote {
   transition: background-color 0.15s ease, color 0.15s ease;
 }
 .btn:hover,
-.btn:focus-visible { background: #fff; color: var(--bark); }
+.btn:focus-visible { background: var(--btn-invert-bg); color: var(--bark); }
 .btn .arrow { margin-right: 0.4rem; }
 
 .toc { padding-left: 1.15rem; }
@@ -303,18 +370,18 @@ blockquote {
 .alert-box > :last-child { margin-bottom: 0; }
 
 .info-box {
-  background: #eaf4fb;
-  border-left-color: #4a90c4;
+  background: var(--info-bg);
+  border-left-color: var(--info-border);
 }
 
 .info-box--green {
-  background: #e9f4ee;
-  border-left-color: var(--pine);
+  background: var(--infogreen-bg);
+  border-left-color: var(--infogreen-border);
 }
 
 .alert-box {
-  background: #fdf6da;
-  border-left-color: #cc9a1e;
+  background: var(--alert-bg);
+  border-left-color: var(--alert-border);
 }
 
 /* ---------- The list ---------- */
@@ -352,7 +419,7 @@ blockquote {
   padding: 0 0.7rem;
   border: 1px solid var(--rule);
   border-radius: 3px;
-  background: #fff;
+  background: var(--field-bg);
   color: var(--ink);
 }
 
@@ -464,7 +531,7 @@ blockquote {
 
 .roster { padding-left: 1.15rem; margin: 1rem 0; }
 .roster li { padding: 0.9rem 0; }
-.roster li::marker { color: var(--pine); }
+.roster li::marker { color: var(--pine-text); }
 .roster .finisher { font-weight: 700; }
 
 .form-embed {
@@ -472,7 +539,7 @@ blockquote {
   border: 1px solid var(--rule);
   border-radius: 4px;
   overflow: hidden;
-  background: #fff;
+  background: var(--field-bg);
 }
 .form-embed iframe { display: block; width: 100%; border: 0; min-height: 720px; }
 
@@ -511,11 +578,11 @@ blockquote {
 .footer-nav a:focus-visible {
   background: var(--pine);
   border-color: var(--pine);
-  color: #fff;
+  color: var(--on-accent);
 }
 
 .colophon { margin: 0; }
-.colophon a { color: var(--pine); }
+.colophon a { color: var(--pine-text); }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition: none !important; animation: none !important; }

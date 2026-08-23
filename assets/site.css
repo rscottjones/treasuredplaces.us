@@ -520,3 +520,93 @@ blockquote {
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition: none !important; animation: none !important; }
 }
+
+/* ---------- Print ---------- */
+/* Tuned for the list page: someone printing a 495-row checklist for a
+   road-trip binder. Strips navigation and controls, forces the mobile
+   stacking off so the table prints as a real table, and lets rows break
+   across pages cleanly. */
+
+@media print {
+  /* Hide anything that isn't the content itself */
+  .nav-bar,
+  .site-footer,
+  .hero-figure,
+  .filters,
+  .result-count,
+  .skip,
+  .btn-row,
+  .form-embed {
+    display: none !important;
+  }
+
+  body {
+    background: #fff;
+    color: #000;
+    font-size: 10pt;
+  }
+
+  .page,
+  .wrap {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Keep the site title as a header on the printed page */
+  .masthead { padding: 0 0 0.5rem; }
+  .sign-title { font-size: 18pt; color: #000; }
+  .sign-tagline { font-size: 8pt; color: #333; }
+
+  h1 { font-size: 16pt; color: #000; }
+  h2 { font-size: 13pt; color: #000; page-break-after: avoid; }
+  h3 { font-size: 11pt; color: #000; page-break-after: avoid; }
+
+  a { color: #000; text-decoration: none; }
+
+  /* Undo the small-screen stacked layout so the table prints as a table */
+  .list-table { width: 100%; font-size: 9pt; }
+  .list-table thead { position: static; left: auto; display: table-header-group; }
+  .list-table tr { display: table-row; page-break-inside: avoid; }
+  .list-table td { display: table-cell; border-bottom: 1px solid #ccc; padding: 3pt 4pt; }
+  .list-table td::after { content: none !important; }
+  .list-table tr:hover td { background: none; }
+  .list-table th {
+    border-bottom: 1pt solid #000;
+    color: #000;
+    padding: 3pt 4pt;
+  }
+
+  /* Filtered-out rows stay hidden when printing a filtered view */
+  .list-table tr[hidden] { display: none !important; }
+
+  .type-code,
+  .states,
+  .managers { color: #000; font-size: 9pt; }
+
+  /* Give the checkbox column something to write in */
+  .list-table tbody tr td:first-child::before {
+    content: "☐  ";
+    color: #000;
+  }
+
+  .tally-grid { display: block; }
+  .tally-card,
+  .tally-total {
+    background: none;
+    border: 1pt solid #000;
+    color: #000;
+    padding: 6pt;
+    margin-bottom: 4pt;
+    min-height: 0;
+  }
+  .tally-card .count,
+  .tally-card .label,
+  .tally-total .line,
+  .tally-total .caption { color: #000; }
+
+  .info-box,
+  .alert-box { border: 1pt solid #666; background: none; }
+
+  .abbrev { page-break-inside: avoid; }
+}

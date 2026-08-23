@@ -5,7 +5,7 @@ Visited,Date visited,Place name,Type,Agency,State(s),Notes,Official page
 ,,Admiralty Island,NM,USFS,AK,,https://www.fs.usda.gov/recarea/tongass/recarea/?recid=78614
 ,,African Burial Ground,NM,NPS,NY,,https://www.nps.gov/afbg/
 ,,Agate Fossil Beds,NM,NPS,NE,,https://www.nps.gov/agfo/
-,,Agua Fria,NM,BLM,AZ,,https://www.blm.gov/visit/agua-fria
+,,Agua Fria,NM,BLM,AZ,,https://www.blm.gov/national-conservation-lands/arizona/agua-fria
 ,,Alagnak,WR,NPS,AK,,https://www.nps.gov/alag/
 ,,Aleutian Islands World War II,NM,FWS,AK,,https://www.fws.gov/refuge/alaska_maritime/AleutianIslandsWWIIMonument.html
 ,,Alibates Flint Quarries,NM,NPS,TX,,https://www.nps.gov/alfl/
@@ -13,6 +13,7 @@ Visited,Date visited,Place name,Type,Agency,State(s),Notes,Official page
 ,,Amache,NHS,NPS,CO,,https://www.nps.gov/amch/
 ,,"American Samoa, National Park of",NP,NPS,AS,,https://www.nps.gov/npsa/
 ,,Amistad,NRA,NPS,TX,,https://www.nps.gov/amis/
+,,Ancestral Footprints,NM,"BLM, USFS",AZ,,https://www.blm.gov/national-conservation-lands/arizona/ancestral-footprints
 ,,Andersonville,NHS,NPS,GA,,https://www.nps.gov/ande/
 ,,Andrew Johnson,NHS,NPS,TN,,https://www.nps.gov/anjo/
 ,,Aniakchak,NM,NPS,AK,,https://www.nps.gov/ania/
@@ -31,7 +32,7 @@ Visited,Date visited,Place name,Type,Agency,State(s),Notes,Official page
 ,,Bandelier,NM,NPS,NM,,https://www.nps.gov/band/
 ,,Basin and Range,NM,BLM,NV,,https://www.blm.gov/programs/national-conservation-lands/nevada/basin-and-range-national-monument
 ,,Bears Ears,NM,"BLM, USFS",UT,,https://www.blm.gov/visit/bears-ears-national-monument
-,,Beaver Dam Wash,NCA,BLM,UT,,https://www.blm.gov/visit/beaver-dam-wash-nca
+,,Beaver Dam Wash,NCA,BLM,UT,,https://www.blm.gov/programs/national-conservation-lands/utah/beaver-dam-wash-nca
 ,,Belmont-Paul Womens Equality,NM,NPS,DC,,https://www.nps.gov/bepa/
 ,,Bent’s Old Fort,NHS,NPS,CO,,https://www.nps.gov/beol/
 ,,Bering Land Bridge,NPRES,NPS,AK,,https://www.nps.gov/bela/
@@ -45,7 +46,7 @@ Visited,Date visited,Place name,Type,Agency,State(s),Notes,Official page
 ,,Birmingham Civil Rights,NM,NPS,AL,,https://www.nps.gov/bicr
 ,,Biscayne,NP,NPS,FL,,https://www.nps.gov/bisc/
 ,,Black Canyon of the Gunnison,NP,NPS,CO,,https://www.nps.gov/blca/
-,,Black Rock Desert-High Rock Canyon Emigrant Trails,NCA,BLM,NV,,https://www.blm.gov/visit/black-rock-high-rock-emigrant-trails-nca
+,,Black Rock Desert-High Rock Canyon Emigrant Trails,NCA,BLM,NV,,https://www.blm.gov/programs/national-conservation-lands/nevada/black-rock-desert-high-rock-canyon-emigrant-trails-nca
 ,,Blackstone River Valley,NHP,NPS,"MA, RI",,https://www.nps.gov/blac/
 ,,Blackwell School,NHS,NPS,TX,,https://nps.gov/blsc/
 ,,Blue Ridge,PKWY,NPS,"VA, NC",,https://www.nps.gov/blri/
@@ -56,7 +57,7 @@ Visited,Date visited,Place name,Type,Agency,State(s),Notes,Official page
 ,,Boston Harbor Islands,NRA,NPS,MA,,https://www.nps.gov/boha/
 ,,Brices Cross Roads,NBS,NPS,MS,,https://www.nps.gov/brcr/
 ,,Brown v. Board of Education,NHS,NPS,KS,,https://www.nps.gov/brvb/
-,,Browns Canyon,NM,"BLM, USFS",CO,,https://www.fs.fed.us/visit/browns-canyon-national-monument
+,,Browns Canyon,NM,"BLM, USFS",CO,,https://www.blm.gov/programs/national-conservation-lands/colorado/browns-canyon
 ,,Bryce Canyon,NP,NPS,UT,,https://www.nps.gov/brca/
 ,,Buck Island Reef,NM,NPS,VI,,https://www.nps.gov/buis/
 ,,Buffalo,NR,NPS,AR,,https://www.nps.gov/buff/
@@ -101,7 +102,7 @@ Visited,Date visited,Place name,Type,Agency,State(s),Notes,Official page
 ,,Chimney Rock,NM,USFS,CO,,https://www.fs.fed.us/visit/destination/chimney-rock-national-monument
 ,,Chiricahua,NM,NPS,AZ,,https://www.nps.gov/chir/
 ,,Christiansted,NHS,NPS,VI,,https://www.nps.gov/chri/
-,,Chuckwalla,NM,BLM,CA,,https://www.blm.gov/programs/national-conservation-lands/california/chuckwalla
+,,Chuckwalla,NM,BLM,CA,,https://www.blm.gov/chuckwalla-national-monument
 ,,City of Rocks,NRES,NPS,ID,,https://www.nps.gov/ciro/
 ,,Clara Barton,NHS,NPS,MD,,https://www.nps.gov/clba/
 ,,Colonial,NHP,NPS,VA,,https://www.nps.gov/colo/
@@ -136,7 +137,7 @@ Visited,Date visited,Place name,Type,Agency,State(s),Notes,Official page
 ,,Effigy Mounds,NM,NPS,IA,,https://www.nps.gov/efmo/
 ,,Eisenhower,NHS,NPS,PA,,https://www.nps.gov/eise/
 ,,El Malpais,NM,NPS,NM,,https://www.nps.gov/elma/
-,,El Malpais,NCA,BLM,NM,,https://www.blm.gov/visit/el-malpais-nca
+,,El Malpais,NCA,BLM,NM,,https://www.blm.gov/programs/national-conservation-lands/new-mexico/el-malpais-national-conservation-area
 ,,El Morro,NM,NPS,NM,,https://www.nps.gov/elmo/
 ,,Eleanor Roosevelt,NHS,NPS,NY,,https://www.nps.gov/elro/
 ,,Emmett Till and Mamie Till-Mobley,NM,NPS,"IL, MS",,https://www.nps.gov/till/index.htm
@@ -166,7 +167,7 @@ Visited,Date visited,Place name,Type,Agency,State(s),Notes,Official page
 ,,Fort Raleigh,NHS,NPS,NC,,https://www.nps.gov/fora/
 ,,Fort Scott,NHS,NPS,KS,,https://www.nps.gov/fosc/
 ,,Fort Smith,NHS,NPS,AR,,https://www.nps.gov/fosm/
-,,Fort Stanton-Snowy River Cave,NCA,BLM,NM,,https://www.blm.gov/visit/fort-stanton-snowy-river-cave-nca
+,,Fort Stanton-Snowy River Cave,NCA,BLM,NM,,https://www.blm.gov/programs/national-conservation-lands/new-mexico/fort-stanton-snowy-river-cave-national-conservation-area
 ,,Fort Stanwix,NM,NPS,NY,,https://www.nps.gov/fost/
 ,,Fort Sumter and Fort Moultrie,NHP,NPS,SC,,https://www.nps.gov/fosu
 ,,Fort Union,NM,NPS,NM,,https://www.nps.gov/foun/
@@ -204,7 +205,7 @@ Visited,Date visited,Place name,Type,Agency,State(s),Notes,Official page
 ,,Golden Spike,NHP,NPS,UT,,https://www.nps.gov/gosp/
 ,,Governor’s Island,NM,NPS,NY,,https://www.nps.gov/gois/
 ,,Grand Canyon,NP,NPS,AZ,,https://www.nps.gov/grca/
-,,Grand Canyon-Parashant,NM,"BLM, NPS",AZ,,https://www.blm.gov/office/grand-canyon-parashant-national-monument
+,,Grand Canyon-Parashant,NM,"BLM, NPS",AZ,,https://www.blm.gov/national-conservation-lands/arizona/grandcanyon-parashant
 ,,Grand Portage,NM,NPS,MN,,https://www.nps.gov/grpo/
 ,,Grand Staircase-Escalante,NM,BLM,UT,,https://www.blm.gov/programs/national-conservation-lands/utah/grand-staircase-escalante-national-monument
 ,,Grand Teton,NP,NPS,WY,,https://www.nps.gov/grte/
@@ -244,7 +245,7 @@ Visited,Date visited,Place name,Type,Agency,State(s),Notes,Official page
 ,,Ice Age,NST,NPS,WI,,https://www.nps.gov/iatr/
 ,,Independence,NHP,NPS,PA,,https://www.nps.gov/inde/
 ,,Indiana Dunes,NP,NPS,IN,,https://www.nps.gov/indu/
-,,Ironwood Forest,NM,BLM,AZ,,https://www.blm.gov/visit/ironwood
+,,Ironwood Forest,NM,BLM,AZ,,https://www.blm.gov/national-conservation-lands/arizona/ironwood
 ,,Isle Royale,NP,NPS,MI,,https://www.nps.gov/isro/
 ,,James A. Garfield,NHS,NPS,OH,,https://www.nps.gov/jaga/
 ,,Jean Lafitte,NHP&P,NPS,LA,,https://www.nps.gov/jela/
@@ -254,13 +255,13 @@ Visited,Date visited,Place name,Type,Agency,State(s),Notes,Official page
 ,,John Day Fossil Beds,NM,NPS,OR,,https://www.nps.gov/joda/
 ,,John Fitzgerald Kennedy,NHS,NPS,MA,,https://www.nps.gov/jofi/
 ,,John Muir,NHS,NPS,CA,,https://www.nps.gov/jomu/
-,,John Wesley Powell,NCA,BLM,UT,,https://www.blm.gov/documents/utah/public-room/map/john-wesley-powell-national-conservation-area
+,,John Wesley Powell,NCA,BLM,UT,,https://www.blm.gov/programs/national-conservation-lands/utah/john-wesley-powell-nca
 ,,Johnstown Flood,NMEM,NPS,PA,,https://www.nps.gov/jofl/
 ,,Joshua Tree,NP,NPS,CA,,https://www.nps.gov/jotr/
-,,Jurassic,NM,BLM,UT,,https://www.blm.gov/learn/interpretive-centers/cleveland-lloyd-dinosaur-quarry
+,,Jurassic,NM,BLM,UT,,https://www.blm.gov/programs/national-conservation-lands/utah/jurassic-national-monument
 ,,Kalaupapa,NHP,NPS,HI,,https://www.nps.gov/kala/
 ,,Kaloko-Honokōhau,NHP,NPS,HI,,https://www.nps.gov/kaho/
-,,Kasha-Katuwe Tent Rocks,NM,BLM,NM,,https://www.blm.gov/visit/kktr
+,,Kasha-Katuwe Tent Rocks,NM,BLM,NM,,https://www.blm.gov/programs/national-conservation-lands/new-mexico/kasha-katuwe-tent-rocks-national-monument
 ,,Katahdin Woods and Waters,NM,NPS,ME,,https://nps.gov/kaww
 ,,Katmai,NP,NPS,AK,,https://www.nps.gov/katm/
 ,,Katmai,NPRES,NPS,AK,,https://www.nps.gov/katm/
@@ -280,7 +281,7 @@ Visited,Date visited,Place name,Type,Agency,State(s),Notes,Official page
 ,,Lake Mead,NRA,NPS,"NV, AZ",,https://www.nps.gov/lame/
 ,,Lake Meredith,NRA,NPS,TX,,https://www.nps.gov/lamr/
 ,,Lake Roosevelt,NRA,NPS,WA,,https://www.nps.gov/laro/
-,,Las Cienegas,NCA,BLM,AZ,,https://www.blm.gov/visit/las-cienegas
+,,Las Cienegas,NCA,BLM,AZ,,https://www.blm.gov/national-conservation-lands/arizona/las-cienegas
 ,,Lassen Volcanic,NP,NPS,CA,,https://www.nps.gov/lavo/
 ,,Lava Beds,NM,NPS,CA,,https://www.nps.gov/labe/
 ,,Lewis and Clark,NHP,NPS,"OR, WA",,https://www.nps.gov/lewi/
@@ -370,11 +371,11 @@ Visited,Date visited,Place name,Type,Agency,State(s),Notes,Official page
 ,,Pipestone,NM,NPS,MN,,https://www.nps.gov/pipe/
 ,,Piscataway,P,NPS,MD,,https://www.nps.gov/pisc/
 ,,Point Reyes,NS,NPS,CA,,https://www.nps.gov/pore/
-,,Pompeys Pillar,NM,BLM,MT,,https://www.blm.gov/visit/pompeys-pillar-national-monument
+,,Pompeys Pillar,NM,BLM,MT,,https://www.blm.gov/programs/national-conservation-lands/montana-dakotas/pompeys-pillar
 ,,Port Chicago,NMEM,NPS,CA,,https://www.nps.gov/poch/
 ,,Potomac Heritage,NST,NPS,"MD, DC, VA, PA",,https://www.nps.gov/pohe/
 ,,Poverty Point,NM,NPS,LA,,https://www.nps.gov/popo/
-,,Prehistoric Trackways,NM,BLM,NM,,https://www.blm.gov/visit/ptnm
+,,Prehistoric Trackways,NM,BLM,NM,,https://www.blm.gov/programs/national-conservation-lands/new-mexico/prehistoric-trackways-national-monument
 ,,President Lincoln and Soldiers’ Home,NM,NPS,DC,,https://www.nps.gov/nr/travel/presidents/lincoln_cottage.html
 ,,President William Jefferson Clinton Birthplace Home,NHS,NPS,AR,,https://www.nps.gov/wicl/
 ,,Prince William Forest,P,NPS,VA,,https://www.nps.gov/prwi/
@@ -395,7 +396,7 @@ Visited,Date visited,Place name,Type,Agency,State(s),Notes,Official page
 ,,Rosie the Riveter World War II Home Front,NHP,NPS,CA,,https://www.nps.gov/rori
 ,,Ross Lake,NRA,NPS,WA,,https://www.nps.gov/rola/
 ,,Russell Cave,NM,NPS,AL,,https://www.nps.gov/ruca/
-,,Río Grande del Norte,NM,BLM,NM,,https://www.blm.gov/visit/rgdnnm
+,,Río Grande del Norte,NM,BLM,NM,,https://www.blm.gov/programs/national-conservation-lands/new-mexico/rio-grande-del-norte-national-monument
 ,,Sagamore Hill,NHS,NPS,NY,,https://www.nps.gov/sahi/
 ,,Saguaro,NP,NPS,AZ,,https://www.nps.gov/sagu/
 ,,Saint Croix,NSR,NPS,WI,,https://www.nps.gov/sacn/
@@ -411,12 +412,12 @@ Visited,Date visited,Place name,Type,Agency,State(s),Notes,Official page
 ,,San Gabriel Mountains,NM,USFS,CA,,https://www.fs.fed.us/visit/san-gabriel-mountains-national-monument
 ,,San Juan,NHS,NPS,PR,,https://www.nps.gov/saju/
 ,,San Juan Island,NHP,NPS,WA,,https://www.nps.gov/sajh/
-,,San Juan Islands,NM,BLM,WA,,https://www.blm.gov/or/resources/recreation/sanjuans/
-,,San Pedro Riparian,NCA,BLM,AZ,,https://www.blm.gov/visit/san-pedro
+,,San Juan Islands,NM,BLM,WA,,https://www.blm.gov/programs/national-conservation-lands/national-monuments/oregon-washington/san-juan-islands
+,,San Pedro Riparian,NCA,BLM,AZ,,https://www.blm.gov/national-conservation-lands/arizona/san-pedro
 ,,Sand Creek Massacre,NHS,NPS,CO,,https://www.nps.gov/sand/
-,,Sand to Snow,NM,BLM,CA,,https://www.blm.gov/visit/sand-to-snow-national-monument
+,,Sand to Snow,NM,BLM,CA,,https://www.blm.gov/programs/national-conservation-lands/california/sand-to-snow-national-monument
 ,,Santa Monica Mountains,NRA,NPS,CA,,https://www.nps.gov/samo/
-,,Santa Rosa and San Jacinto Mountains,NM,BLM,CA,,https://www.blm.gov/visit/santa-rosa-san-jacinto-mountains-national-monument
+,,Santa Rosa and San Jacinto Mountains,NM,BLM,CA,,https://www.blm.gov/programs/national-conservation-lands/california/santa-rosa-and-san-jacinto-mountains-national-monument
 ,,Saratoga,NHP,NPS,NY,,https://www.nps.gov/sara/
 ,,Saugus Iron Works,NHS,NPS,MA,,https://www.nps.gov/sair/
 ,,Scotts Bluff,NM,NPS,NE,,https://www.nps.gov/scbl/
@@ -426,7 +427,7 @@ Visited,Date visited,Place name,Type,Agency,State(s),Notes,Official page
 ,,Sitka,NHP,NPS,AK,,https://www.nps.gov/sitk/
 ,,Sleeping Bear Dunes,NL,NPS,MI,,https://www.nps.gov/slbe/
 ,,Sloan Canyon,NCA,BLM,NV,,https://www.blm.gov/programs/national-conservation-lands/nevada/sloan-canyon-nca
-,,Sonoran Desert,NM,BLM,AZ,,https://www.blm.gov/visit/sonoran-desert
+,,Sonoran Desert,NM,BLM,AZ,,https://www.blm.gov/national-conservation-lands/arizona/sonoran-desert
 ,,Springfield 1908 Race Riot,NM,NPS,IL,,https://www.nps.gov/spra
 ,,Springfield Armory,NHS,NPS,MA,,https://www.nps.gov/spar/
 ,,St Francis Dam Disaster,NM,USFS,CA,,https://roadtrippers.com/magazine/st-francis-dam-disaster-monument/
@@ -463,7 +464,7 @@ Visited,Date visited,Place name,Type,Agency,State(s),Notes,Official page
 ,,Valles Caldera,NPRES,NPS,NM,,https://www.nps.gov/vall/
 ,,Valley Forge,NHP,NPS,PA,,https://www.nps.gov/vafo/
 ,,Vanderbilt Mansion,NHS,NPS,NY,,https://www.nps.gov/vama/
-,,Vermilion Cliffs,NM,BLM,AZ,,https://www.blm.gov/visit/vermilion-cliffs
+,,Vermilion Cliffs,NM,BLM,AZ,,https://www.blm.gov/national-conservation-lands/arizona/vermilion-cliffs
 ,,Vicksburg,NMP,NPS,"MS, LA",,https://www.nps.gov/vick/
 ,,Vietnam Veterans,NMEM,NPS,DC,,https://www.nps.gov/vive/
 ,,Virgin Islands,NP,NPS,VI,,https://www.nps.gov/viis/

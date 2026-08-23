@@ -47,17 +47,17 @@ every one of these needs to change:
 | File | Where | Contains |
 | --- | --- | --- |
 | `index.html` | Stat card 1 | **433** National Park units |
-| `index.html` | Stat card 2 | **132** National Monuments |
+| `index.html` | Stat card 2 | **133** National Monuments |
 | `index.html` | Stat card 3 | **17** National Conservation Areas |
-| `index.html` | Green total card | **495** Treasured Places |
-| `index.html` | Paragraph below the cards | "combined total of **495**…" |
-| `index.html` | Paragraph below that | "That's **495** of our nation's best…" |
-| `index.html` | `<meta name="description">` (top of file) | "**495** places in all" |
-| `index.html` | `og:description` (top of file) | "**495** places in all" |
-| `list/index.html` | Intro line under the heading | "**495** in total" |
-| `list/index.html` | `<meta name="description">` | "**495** places" |
-| `list/index.html` | `og:description` | "**495** places" |
-| `404.html` | Body text | "the list of all **495** places" |
+| `index.html` | Green total card | **496** Treasured Places |
+| `index.html` | Paragraph below the cards | "combined total of **496**…" |
+| `index.html` | Paragraph below that | "That's **496** of our nation's best…" |
+| `index.html` | `<meta name="description">` (top of file) | "**496** places in all" |
+| `index.html` | `og:description` (top of file) | "**496** places in all" |
+| `list/index.html` | Intro line under the heading | "**496** in total" |
+| `list/index.html` | `<meta name="description">` | "**496** places" |
+| `list/index.html` | `og:description` | "**496** places" |
+| `404.html` | Body text | "the list of all **496** places" |
 | `join/index.html` | First paragraph | "all **433** National Park units" |
 
 A quick way to catch stragglers: use GitHub's search box within the repo to

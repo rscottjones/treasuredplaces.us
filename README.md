@@ -18,7 +18,6 @@ coming-soon/                       Redirect stub -> /updates/#coming-soon
 the-treasured-places-list/         Redirect stub -> /list/ (old WordPress URL)
 join-the-quest/                    Redirect stub -> /join/ (old WordPress URL)
 assets/site.css                    All styling
-assets/nav.js                      Mobile menu
 assets/list-filter.js              Search/filter on the list page
 data/treasured-places-checklist.csv   Downloadable spreadsheet, linked from the site
 images/                            Site images

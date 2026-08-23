@@ -429,14 +429,18 @@ blockquote {
   /* Must come after the display:block above, or filtered-out rows
      stay visible on mobile. */
   .list-table tr[hidden] { display: none; }
-  .list-table td { display: inline; border: 0; padding: 0; }
+  .list-table td { display: inline; border: 0; padding: 0; vertical-align: baseline; }
   /* The fixed column widths above don't apply once rows stack. */
   .list-table td:nth-child(2),
   .list-table td:nth-child(3),
   .list-table td:nth-child(4) { width: auto; }
   .list-table td[data-col="name"] { display: block; font-size: 1.02rem; }
-  .list-table td[data-col="type"]::after { content: " · "; color: var(--rule); }
-  .list-table td[data-col="managers"]::after { content: " · "; color: var(--rule); }
+  .list-table td[data-col="type"]::after,
+  .list-table td[data-col="managers"]::after {
+    content: "•";
+    color: var(--ink-soft);
+    margin: 0 0.4em;
+  }
 }
 
 .abbrev {

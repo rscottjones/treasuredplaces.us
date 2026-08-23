@@ -12,7 +12,6 @@ faq/                               FAQ
 updates/                           Updates (the three former blog posts)
 404.html
 blog/                              Redirect stub -> /updates/
-coming-soon/                       Redirect stub -> /updates/#coming-soon
 3-new-nps-additions/               Redirect stub -> /updates/#3-new-nps-additions
 4-new-additions-in-jan-2025/       Redirect stub -> /updates/#4-new-additions-in-jan-2025
 the-treasured-places-list/         Redirect stub -> /list/ (old WordPress URL)
@@ -120,7 +119,7 @@ matter anywhere in the site either.
 
 GitHub Pages has no server-side redirect rules — there's no config file
 that tells it "send this old URL to that new one." That's what the `blog/`,
-`coming-soon/`, `3-new-nps-additions/`, and `4-new-additions-in-jan-2025/`
+`3-new-nps-additions/`, and `4-new-additions-in-jan-2025/`
 folders are: real, static pages that redirect via
 `<meta http-equiv="refresh">` the instant they load, since a real file is
 the only thing GitHub Pages can serve. Broader old WordPress URLs — category
@@ -132,7 +131,7 @@ four post URLs did.
 
 Push to a Git repo (or drag-and-drop the folder directly on Netlify — no
 Git needed) and connect it. Neither needs a build command; set the build
-output directory to the repo root. The `blog/`, `coming-soon/`, etc. stub
+output directory to the repo root. The `blog/`, etc. stub
 folders work the same way there as on GitHub Pages.
 
 Both of those hosts also support a `_redirects` file for pattern-based
@@ -148,7 +147,10 @@ and inbound links use.
 ## Changes from the WordPress version
 
 - **Updates** is one page (`/updates/`) instead of a blog. Old post URLs
-  redirect to anchors on it: `/coming-soon` → `/updates/#coming-soon`, etc.
+  redirect to anchors on it: `/3-new-nps-additions` →
+  `/updates/#3-new-nps-additions`, etc. The "Coming soon" placeholder post
+  and its `/coming-soon` redirect were both removed once the site had
+  actual content to show instead.
 - **The list is filterable** — search by name, narrow by designation type or
   state. The dropdowns build themselves from the table, so new rows appear
   in them automatically.

@@ -437,7 +437,7 @@ blockquote {
   .list-table td[data-col="name"] { display: block; font-size: 1.02rem; }
   .list-table td[data-col="type"]::after,
   .list-table td[data-col="managers"]::after {
-    content: "•";
+    content: "∙";
     color: var(--ink-soft);
     margin: 0 0.4em;
   }
@@ -463,9 +463,8 @@ blockquote {
 /* ---------- Quest roster ---------- */
 
 .roster { list-style: none; padding: 0; margin: 1rem 0; }
-.roster li { padding: 0.55rem 0; border-bottom: 1px solid var(--rule); }
+.roster li { padding: 0.9rem 0; }
 .roster .finisher { font-weight: 700; }
-.roster .links { display: block; margin: 0.2rem 0 0 1rem; font-size: 0.85rem; color: var(--ink-soft); }
 
 .form-embed {
   margin: 1.5rem 0;

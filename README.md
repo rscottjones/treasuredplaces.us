@@ -162,10 +162,12 @@ and inbound links use.
   with the R Scott Jones / Scott Jones Enterprises line.
 - The Google Form is embedded directly on the Join the Quest page, with a
   fallback link underneath.
-- Fonts are Zilla Slab and Public Sans, loaded from Google Fonts. If you'd
-  rather have zero external requests, delete the two `<link>` tags for
-  `fonts.googleapis.com` in each page; the CSS falls back to Georgia and the
-  system sans stack.
+- The whole site uses one typeface, Public Sans, loaded from Google Fonts.
+  Headings, body text, and the homepage stat cards all use it — there's no
+  longer a separate display font. If you'd rather have zero external
+  requests, delete the three font-related `<link>` tags near the top of
+  each page's `<head>` (two `preconnect` tags plus the stylesheet one);
+  the CSS falls back to the system sans stack.
 - **The list has a fourth filterable column, Land Manager** (NPS, BLM,
   USFS, FWS, or one of two one-off agencies). I determined each place's
   manager from the domain of its official link — `nps.gov` → NPS,
@@ -225,7 +227,8 @@ Fixed:
   say "Twitter": the site's own header/footer social icons (which you asked
   me to drop, and which are still gone) versus individual questers' personal
   social links in their own roster entries. I'd conflated the two and
-  stripped both — restored the roster links.
+  stripped both — restored the roster links. (Both were later removed again,
+  deliberately this time, since neither account is still in use.)
 - A few small wording restorations to match the source exactly: "work in
   progress" → "work-in-progress", "specially protected" →
   "specially-protected", and the roster note's "we'll add it" restored to

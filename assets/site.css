@@ -278,6 +278,7 @@ p { margin: 0 0 1.15rem; }
   border: 2px solid var(--pine);
   border-radius: 12px;
   padding: 1.5rem;
+  margin-bottom: 1.75rem;
   min-height: 6.75rem;
   display: flex;
   align-items: center;
@@ -350,6 +351,11 @@ blockquote {
 .info-box {
   background: #eaf4fb;
   border-left-color: #4a90c4;
+}
+
+.info-box--green {
+  background: #e9f4ee;
+  border-left-color: var(--pine);
 }
 
 .alert-box {

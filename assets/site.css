@@ -397,17 +397,19 @@ blockquote {
 .list-table th:nth-child(4),
 .list-table td:nth-child(4) { width: 9.5rem; }
 
-.type-code {
-  display: inline-block;
+.type-code,
+.states,
+.managers {
+  display: inline;
+  vertical-align: baseline;
   font-size: 0.78rem;
   letter-spacing: 0.06em;
   font-weight: 600;
   color: var(--bark);
-  white-space: nowrap;
 }
 
-.states { color: var(--ink-soft); font-size: 0.78rem; }
-.managers { color: var(--ink-soft); font-size: 0.78rem; white-space: nowrap; }
+.type-code,
+.managers { white-space: nowrap; }
 
 .rownote {
   font-size: 0.75rem;
@@ -424,6 +426,9 @@ blockquote {
     border-bottom: 1px solid var(--rule);
     padding: 0.7rem 0;
   }
+  /* Must come after the display:block above, or filtered-out rows
+     stay visible on mobile. */
+  .list-table tr[hidden] { display: none; }
   .list-table td { display: inline; border: 0; padding: 0; }
   /* The fixed column widths above don't apply once rows stack. */
   .list-table td:nth-child(2),
